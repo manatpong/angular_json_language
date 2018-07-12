@@ -1,0 +1,58 @@
+<div class="warpper">
+  <!-- <div class="spinner medium" [ngClass]="hideSpinner()">
+    <div class="spinner-wrapper">
+      <div class="rotator">
+        <div class="inner-spin"></div>
+        <div class="inner-spin"></div>
+      </div>
+    </div>
+    <div class="spinner-text">
+      <div class="text">Progressing</div>
+    </div>
+  </div> -->
+
+  <div class="port-container" [ngClass]="lockPortPanel()">
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.first_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.second_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.third_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.fourth_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.fifth_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+    <div class="port-row">
+      <div id="{{ port }}" class="port" [ngClass]="[isSelectedPort(port), isConnectedPort(port), isPair(port), isPairSelected(port), isOperation(port), isUnavailablePort(port)]"
+        *ngFor="let port of this.six_row" [matTooltip]="pushDescription(port)" matTooltipPosition="above" (click)="selectPort($event)">
+        <div class="port-name" [matTooltip]="pairDescription(port)" matTooltipPosition="below">W{{ port }}</div>
+      </div>
+    </div>
+
+  </div>
+</div>

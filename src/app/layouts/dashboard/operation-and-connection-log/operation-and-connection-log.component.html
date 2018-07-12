@@ -1,0 +1,83 @@
+<div class="warpper">
+  <div class="container">
+
+    <div class="header">
+      <div class="text">{{ operation_and_conenct_log['head_text'] }}</div>
+    </div>
+
+    <div class="body">
+      <div class="col-one">
+
+        <div class="sub-col-one">
+          <div class="row-one">
+            <div class="sub-row-one-col-one">
+              <div class="text">{{ operation_and_conenct_log['operation_time'] }}</div>
+            </div>
+            <div class="sub-row-one-col-two">
+              <div class="container">
+                <div class="text">{{ this.operation_data['operation_time'] }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="row-two">
+            <div class="sub-row-one-col-one">
+              <div class="text">{{ operation_and_conenct_log['completion'] }}</div>
+            </div>
+            <div class="sub-row-one-col-two">
+              <div class="container">
+                <div class="text">{{ this.operation_data['progress'] }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-col-two">
+          <div class="row-one">
+            <div class="sub-row-one-col-one">
+              <div class="text">{{ operation_and_conenct_log['east_port'] }}</div>
+            </div>
+            <div class="sub-row-one-col-two">
+              <div class="container">
+                <div class="text">{{ this.operation_data['east'] }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="row-two">
+            <div class="sub-row-one-col-one">
+              <div class="text">{{ operation_and_conenct_log['west_port'] }}</div>
+            </div>
+            <div class="sub-row-one-col-two">
+              <div class="container">
+                <div class="text">{{ this.operation_data['west'] }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-two">
+        <div class="sub-row-one">
+          <div class="text">{{ operation_and_conenct_log['date_time'] }}</div>
+        </div>
+        <div class="sub-row-two">
+          <div class="text">{{ operation_and_conenct_log['east_west'] }}</div>
+        </div>
+      </div>
+
+      <!-- TODO TABLE -->
+      <div class="col-three">
+        <div class="table-container" *ngIf="this.connection_history_data !== null">
+          <div class="table-col" *ngFor="let element of this.connection_history_data">
+            <div class="table-row-one">
+              <div class="text">{{ element.timestamp }}</div>
+            </div>
+            <div class="table-row-two">
+              <div class="text">E{{ element.east }}, W{{ element.west }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>

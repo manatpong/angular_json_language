@@ -1,0 +1,104 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    opened="true" disableClose="true" *ngIf="this.currentUser !== null">
+
+    <mat-toolbar class="styled-mat-toolbar">
+      <div class="company-logo-container">
+        <img src="{{ this.assets_path }}xenoptics-logo.png" class="company-logo" />
+      </div>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <a id="dashboard" mat-list-item routerLink="" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'dashboard' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">dashboard</mat-icon>{{ navbar_page['dashboard'] }}</a>
+
+      <a id="port_connection" mat-list-item routerLink="/port_connection" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'port_connection' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings_input_component</mat-icon>{{ navbar_page['port_connection'] }}</a>
+
+      <a id="connection_queue" mat-list-item routerLink="/connection_queue" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'connection_queue' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">format_list_numbered</mat-icon>{{ navbar_page['connection_queue'] }}</a>
+
+      <a id="debugging" mat-list-item routerLink="/debugging" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'debugging' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">bug_report</mat-icon>{{ navbar_page['debugging'] }}</a>
+
+      <div class="menu-list-item">
+        <div class="text">{{ navbar_page['head_log_monitoring'] }}</div>
+      </div>
+
+      <a id="current_connection" mat-list-item routerLink="/current_connection" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'current_connection' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings_input_component</mat-icon>{{ navbar_page['current_connection'] }}</a>
+
+      <a id="connection_history" mat-list-item routerLink="/connection_history" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'connection_history' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">equalizer</mat-icon>{{ navbar_page['connection_history'] }}</a>
+
+      <a id="alarm_history" mat-list-item routerLink="/alarm_history" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'alarm_history' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">priority_high</mat-icon>{{ navbar_page['alarm_history'] }}</a>
+
+      <div class="menu-list-item">
+        <div class="text">{{ navbar_page['head_configurations'] }}</div>
+      </div>
+
+      <a id="port_configuration" mat-list-item routerLink="/port_configuration" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'port_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings_input_hdmi</mat-icon>{{ navbar_page['port_config'] }}</a>
+
+      <a id="alarm_configuration" mat-list-item routerLink="" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'alarm_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">report_problem</mat-icon>{{ navbar_page['alarm_setting'] }}</a>
+
+      <a id="snmp_configuration" mat-list-item routerLink="/snmp_configuration" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'snmp_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings_ethernet</mat-icon>{{ navbar_page['snmp'] }}</a>
+
+      <a id="smtp_configuration" mat-list-item routerLink="/smtp_configuration" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'smtp_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings_ethernet</mat-icon>{{ navbar_page['smtp'] }}</a>
+
+      <a id="maintenance_configuration" mat-list-item routerLink="" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'maintenance_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">build</mat-icon>{{ navbar_page['maintenance'] }}</a>
+
+      <a id="security_configuration" mat-list-item routerLink="" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'security_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">security</mat-icon>{{ navbar_page['security'] }}</a>
+
+      <a id="settings_configuration" mat-list-item routerLink="/system_configuration" (click)="selectMenu($event)" [ngClass]="this.selected_menu == 'settings_configuration' ? 'selected-menu' : null">
+        <mat-icon class="icon-spacer">settings</mat-icon>{{ navbar_page['system'] }}</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" *ngIf="this.currentUser !== null">
+      <div class="robot-mode-container" *ngIf="this.enable_debug">
+        <div class="row-one">
+          <div class="text">{{ navbar_page['robot_mode'] }}: {{ this.current_robot_mode }}</div>
+        </div>
+        <div class="row-two">
+          <mat-icon *ngIf="this.current_robot_mode === 'Normal'">settings_input_component</mat-icon>
+          <mat-icon *ngIf="this.current_robot_mode === 'Simulation'">adb</mat-icon>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row-one">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="row-two">
+          <button mat-icon-button [matMenuTriggerFor]="menu" class="text drop_down">{{ this.currentUser['username'] }}<mat-icon>arrow_drop_down</mat-icon>
+            <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>arrow_drop_down</mat-icon>
+            </button> -->
+            
+          </button>
+          <mat-menu #menu="matMenu" class="setting_menu">
+              <button mat-menu-item ><span class="test"><mat-icon>person</mat-icon>{{ navbar_page['user_profile'] }}</span></button>
+              <button mat-menu-item><mat-icon>settings</mat-icon>{{ navbar_page['setting'] }}</button>
+              <button mat-menu-item [matMenuTriggerFor]="languages"><mat-icon>language</mat-icon>{{ navbar_page['languages'] }}</button>
+              <mat-menu #languages="matMenu">
+                <button mat-menu-item (click)="changeLanguage('eng')">English</button>
+                <button mat-menu-item (click)="changeLanguage('kr')">한국어</button>
+                <button mat-menu-item (click)="changeLanguage('th')">ภาษาไทย</button>
+              </mat-menu>
+            </mat-menu>
+        </div>
+        <div class="row-three">
+          <div class="text" (click)="logout()">Log out</div>
+        </div>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

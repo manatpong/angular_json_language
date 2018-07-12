@@ -1,0 +1,250 @@
+{
+    "eng": {
+        "debugging": {
+            "head_page": {
+                "menu": "Menu: Debugging",
+                "robot_name": "XSOS-288"
+            },
+            "body_page": {
+                "head_debug": "Debugging",
+                "active_clear_database": "Active clear database",
+                "clear_database_btn": "Clear database",
+                "robot_mode": "mode",
+                "normal": "Normal",
+                "simulation": "Simulation"
+            },
+            "random_card": {
+                "random_queue_head": "Random Queue",
+                "random_text": "Random",
+                "connect_btn": "Connect",
+                "discon_btn": "Disconnect",
+                "random_btn": "Random",
+                "random_with_con": "Random with Condition",
+                "random_round": "Random Round(s)",
+                "connect_switch": "Connect",
+                "disconnect_switch": "Disconnect",
+                "ports": "port(s)",
+                "connect_slider": "Connect",
+                "disconnect_slider": "Disconnect",
+                "random_with_con_btn": "Random"
+            }
+        },
+        "port_connection": {
+            "head_page": {
+                "menu": "Menu: Port Connection",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "humidity": "Humidity",
+                "temperature": "Temperature",
+                "timing": "Timing",
+                "progress_complete": "Complete",
+                "progress_connect": "Connect",
+                "progress_disconnect": "Disconnect"
+            },
+            "body_page": {
+                "sequence_table": "Sequence Table",
+                "col_no_table": "Active clear database",
+                "col_sequence_detail_table": "Clear database",
+                "col_status_table": "mode",
+                "connect_btn": "Connect",
+                "disconnect_btn": "Disconnect"
+            }
+        },
+        "connection_queue": {
+            "head_page": {
+                "menu": "Menu: Connection Queue",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "humidity": "Humidity",
+                "temperature": "Temperature",
+                "timing": "Timing",
+                "progress_complete": "Complete",
+                "progress_connect": "Connect",
+                "progress_disconnect": "Disconnect"
+            },
+            "table": {
+                "approve_queue_table": "Approve queue Table",
+                "request_queue_table": "Request queue Table",
+                "queue": "Queue",
+                "east_port": "East Port",
+                "east_desc": "East Description",
+                "action": "Action",
+                "schedule": "Schedule",
+                "requester": "Requester",
+                "approve": "Approve",
+                "status": "Status"
+            }
+        },
+        "navbar": {
+            "user_profile": "User Profile",
+            "setting": "Setting",
+            "languages": "Languages",
+            "dashboard": "Dashboard",
+            "port_connection": "Port Connection",
+            "connection_queue": "Connection Queue",
+            "debugging": "Debugging",
+            "head_log_monitoring": "Logs & Monitoring",
+            "current_connection": "Current Connection",
+            "connection_history": "Connection History",
+            "alarm_history": "Alarm History",
+            "head_configurations": "Configurations",
+            "port_config": "Port Configuration",
+            "alarm_setting": "Alarm Setting",
+            "snmp": "SNMP",
+            "smtp": "SMTP",
+            "maintenance": "Maintenance",
+            "security": "Security",
+            "system": "System",
+            "robot_mode": "Robot Mode",
+            "normal": "Normal",
+            "simulation": "Simulation"
+        },
+        "dashboard": {
+            "head_page": {
+                "menu": "Menu: Dashboard",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "software_current": "Software Current Version",
+                "software_previous": "Software Previous Version",
+                "robot_status": "Robot Status",
+                "available_port": "Available Port"
+            },
+            "operation_connection_log_comp": {
+                "head_text": "Latest Operation & Connection Log",
+                "operation_time": "Operation Time",
+                "completion": "Completion",
+                "east_port": "East Port",
+                "west_port": "West Port",
+                "date_time": "Date & Time",
+                "east_west": "East & West"
+            }
+        }
+    },
+    "kr": {
+        "debugging": {
+            "head_page": {
+                "menu": "메뉴 : 디버깅",
+                "robot_name": "XSOS-288"
+            },
+            "body_page": {
+                "head_debug": "디버깅",
+                "active_clear_database": "활성 데이터베이스",
+                "clear_database_btn": "데이터베이스 지우기",
+                "robot_mode": "방법",
+                "normal": "표준",
+                "simulation": "시뮬레이션"
+            },
+            "random_card": {
+                "random_queue_head": "임의 큐",
+                "random_text": "임의",
+                "connect_btn": "연결",
+                "discon_btn": "연결 끊기",
+                "random_btn": "임의",
+                "random_with_con": "조건에 임의로",
+                "random_round": "무작위 라운드 (들)",
+                "connect_switch": "연결",
+                "disconnect_switch": "연결 끊기",
+                "ports": "포트",
+                "connect_slider": "연결",
+                "disconnect_slider": "연결 끊기",
+                "random_with_con_btn": "임의"
+            }
+        },
+        "port_connection": {
+            "head_page": {
+                "menu": "메뉴 : 포트 연결",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "humidity": "습도",
+                "temperature": "온도",
+                "timing": "타이밍",
+                "progress_complete": "완료",
+                "progress_connect": "연결",
+                "progress_disconnect": "연결 끊기"
+            },
+            "body_page": {
+                "sequence_table": "시퀀스 테이블",
+                "col_no_table": "활성 데이터베이스",
+                "col_sequence_detail_table": "데이터베이스 지우기",
+                "col_status_table": "모드",
+                "connect_btn": "연결",
+                "disconnect_btn": "연결 끊기"
+            }
+        },
+        "connection_queue": {
+            "head_page": {
+                "menu": "메뉴 : 연결 대기열",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "humidity": "습도",
+                "temperature": "온도",
+                "timing": "타이밍",
+                "progress_complete": "완료",
+                "progress_connect": "연결",
+                "progress_disconnect": "연결 끊기"
+            },
+            "table": {
+                "approve_queue_table": "승인 대기열 테이블",
+                "request_queue_table": "요청 대기열 테이블",
+                "queue": "대기열",
+                "east_port": "동쪽 항구",
+                "east_desc": "동쪽 설명",
+                "action": "행동",
+                "schedule": "일정",
+                "requester": "리퀘 스터",
+                "approve": "승인하다",
+                "status": "상태"
+            }
+        },
+        "navbar": {
+            "user_profile": "사용자 프로필",
+            "setting": "설정",
+            "languages": "언어",
+            "dashboard": "대시 보드",
+            "port_connection": "포트 연결",
+            "connection_queue": "연결 대기열",
+            "debugging": "디버깅",
+            "head_log_monitoring": "로그 및 모니터링",
+            "current_connection": "현재 연결",
+            "connection_history": "연결 기록",
+            "alarm_history": "알람 내역",
+            "head_configurations": "구성",
+            "port_config": "포트 구성",
+            "alarm_setting": "알람 설정",
+            "snmp": "SNMP",
+            "smtp": "SMTP",
+            "maintenance": "유지 보수",
+            "security": "보안",
+            "system": "시스템",
+            "robot_mode": "로봇 모드",
+            "normal": "보통",
+            "simulation": "시뮬레이션"
+        },
+        "dashboard": {
+            "head_page": {
+                "menu": "메뉴 : 대시 보드",
+                "robot_name": "XSOS-288"
+            },
+            "status_tab": {
+                "software_current": "소프트웨어 현재 버전",
+                "software_previous": "소프트웨어 이전 버전",
+                "robot_status": "로봇 상태",
+                "available_port": "사용 가능한 포트"
+            },
+            "operation_connection_log_comp": {
+                "head_text": "최신 작업 및 연결 로그",
+                "operation_time": "작업 시간",
+                "completion": "완료",
+                "east_port": "동쪽 항구",
+                "west_port": "웨스트 포트",
+                "date_time": "날짜 및 시간",
+                "east_west": "동서"
+            }
+        }
+    }
+}

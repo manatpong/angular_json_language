@@ -1,0 +1,101 @@
+<div class="warpper">
+
+  <div class="col-one">
+    <div class="row-one">
+      <div class="row-one-col-one">
+        <div class="text">Menu: SMTP Configuration</div>
+      </div>
+      <div class="row-one-col-two">
+        <div class="text">XSOS-288</div>
+      </div>
+    </div>
+
+    <div class="row-two">
+      <div class="container">
+        <div class="inner-container">
+          <div class="container-col-one">
+            <div class="text">Authentication:
+              <div class="sub-text">For enhanced security</div>
+            </div>
+          </div>
+          <div class="container-col-two">
+            <div class="container-col-two-row-one">
+              <div class="can-toggle">
+                <input id="auth_enable" type="checkbox">
+                <label for="auth_enable">
+                  <div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+                </label>
+              </div>
+            </div>
+            <div class="container-col-two-row-two">
+              <div class="text">Use Authentication</div>
+            </div>
+            <!-- <div class="container-col-two-row-three">
+                <div class="text">Version: v3 only</div>
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-three">
+      <div class="container">
+        <div class="inner-container">
+          <div class="container-col-one">
+            <div class="text">TLS:
+              <div class="sub-text">Transport Layer Security</div>
+            </div>
+          </div>
+          <div class="container-col-two">
+            <div class="container-col-two-row-one">
+              <div class="can-toggle">
+                <input id="a" type="checkbox">
+                <label for="a">
+                  <div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+                </label>
+              </div>
+            </div>
+            <div class="container-col-two-row-two">
+              <div class="text">TLS</div>
+            </div>
+            <div class="container-col-two-row-three">
+              <div class="text">Version: TLS 1.3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-four">
+      <div class="container">
+        <div class="inner-container">
+          <div class="container-col-one">
+            <div class="text">SSL:
+              <div class="sub-text">Simple Mail Transfer Protocol</div>
+            </div>
+          </div>
+          <div class="container-col-two">
+            <div class="container-col-two-row-one">
+              <div class="can-toggle">
+                <input id="ssl_enable" type="checkbox">
+                <label for="ssl_enable">
+                  <div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+                </label>
+              </div>
+            </div>
+            <div class="container-col-two-row-two">
+              <div class="text">Use SSL</div>
+            </div>
+            <div class="container-col-two-row-three">
+                <div class="text">Version: SSL 3.0</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-two">
+    <div class="container">
+      <app-smtp-email-setting></app-smtp-email-setting>
+    </div>
+  </div>
+</div>

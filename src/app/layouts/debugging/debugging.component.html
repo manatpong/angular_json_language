@@ -1,0 +1,133 @@
+<div class="warpper">
+
+  <div class="col-one">
+    <div class="row-one">
+      <div class="row-one-col-one">
+        <div class="text">{{ debugging_page['head_page']['menu'] }}</div>
+      </div>
+      <div class="row-one-col-two">
+        <div class="text">{{ debugging_page['head_page']['robot_name'] }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-two">
+    <div class="container">
+      <div class="inner-container">
+        <div class="header">
+          <div class="text">{{ debugging_page['body_page']['head_debug'] }}</div>
+        </div>
+        <div class="body">
+          <div class="col">
+
+            <div class="sub-row">
+              <mat-checkbox class="example-margin" [(ngModel)]="active_clear_database">{{ debugging_page['body_page']['active_clear_database'] }}</mat-checkbox>
+              <button mat-raised-button [disabled]="this.active_clear_database === false ? true : null" (click)="openDialogClearDatabase()">{{ debugging_page['body_page']['clear_database_btn'] }}</button>
+            </div>
+
+            <div class="sub-row">
+              <div class="flex-one">
+                <div class="text">{{ this.robot_model }} {{ debugging_page['body_page']['robot_mode'] }}</div>
+              </div>
+              <div class="flex-two">
+                <div class="switcher">
+                  <div class="switcher__toggle" [ngClass]="{simulate_checked: simulate_mode}"></div>
+                  <div (click)="changeRobotMode(0)">
+                    <input type="checkbox" name="normal_mode" class="switcher__input switcher__input--normal" [(ngModel)]="normal_mode">
+                    <label for="normal_mode" class="switcher__label" [ngClass]="{checked_mode: normal_mode}">{{ debugging_page['body_page']['normal'] }}</label>
+                  </div>
+                  <div (click)="changeRobotMode(1)">
+                    <input type="checkbox" name="normal_mode" class="switcher__input switcher__input--simulate" [(ngModel)]="simulate_mode">
+                    <label for="normal_mode" class="switcher__label" [ngClass]="{checked_mode: simulate_mode}">{{ debugging_page['body_page']['simulation'] }}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sub-row"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-two">
+    <div class="container">
+      <div class="inner-container">
+        <div class="header">
+          <div class="text">{{ debugging_page['random_card']['random_queue_head'] }}</div>
+        </div>
+        <div class="body">
+
+          <div class="col">
+            <div class="sub-row">
+              <label for="random" class="random_text">{{ debugging_page['random_card']['random_text'] }}</label>
+              <input type="number" name="random" class="random_input" [(ngModel)]="random_round">
+              <button mat-raised-button (click)="randomPort('connect')">{{ debugging_page['random_card']['connect_btn'] }}</button>
+              <button mat-raised-button (click)="randomPort('disconnect')">{{ debugging_page['random_card']['discon_btn'] }}</button>
+              <button mat-raised-button (click)="randomPort('random')">{{ debugging_page['random_card']['random_btn'] }}</button>
+            </div>
+          </div>
+
+          <div class="random-container">
+            <div class="body-random-con">
+              <div class="head-condition">
+                <div class="head-text">{{ debugging_page['random_card']['random_with_con'] }}</div>
+              </div>
+              <div class="row-condition">
+                <div class="label-text">
+                  <label for="random" class="random_text">{{ debugging_page['random_card']['random_round'] }}</label>
+                </div>
+                <div class="input-box">
+                  <input type="number" name="random" class="random_input" [(ngModel)]="random_con_round">
+                </div>
+                
+              </div>
+              <div class="row-condition">
+                <div class="label-text">
+                  <div class="switcher_condi">
+                    <div class="switcher__toggle" [ngClass]="{condition_checked: act_disconnect}"></div>
+                    <div (click)="changeCondition()">
+                      <input type="checkbox" name="act_connect" class="switcher__input switcher__input--normal " [(ngModel)]="act_connect">
+                      <label for="act_connect" class="switcher__label connect_condition" [ngClass]="{checked_mode: act_connect}">{{ debugging_page['random_card']['connect_switch'] }}</label>
+                    </div>
+                    <div (click)="changeCondition()">
+                      <input type="checkbox" name="act_disconnect" class="switcher__input switcher__input--simulate" [(ngModel)]="act_disconnect">
+                      <label for="act_disconnect" class="switcher__label connect_condition" [ngClass]="{checked_mode: act_disconnect}">{{ debugging_page['random_card']['disconnect_switch'] }}</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <input type="number" [(ngModel)]="act_num_condition" class="random_input">
+                </div>
+                <div class="condition_unit">
+                  <div class="text">{{ debugging_page['random_card']['ports'] }}</div>
+                </div>
+              </div>
+              <div class="row-condition">
+                <div class="disconnect_prop">
+                  <div class="text">
+                    {{ debugging_page['random_card']['connect_slider'] }}
+                    {{connect_prop}}%</div>
+                </div>
+                <div class="slider-box">
+                    <mat-slider (change)="slider_change()" [(ngModel)]="slider_value" tickInterval="1000" class="slider" min="0" max="100" step="1" value="50"></mat-slider>
+                </div>
+                <div class="disconnect_prop">
+                    <div class="text">
+                      {{ debugging_page['random_card']['disconnect_slider'] }}
+                      {{ slider_value }}%</div>
+                </div>
+              </div>
+              <div class="row-button">
+                <button mat-raised-button (click)="randomWithCondition()">{{ debugging_page['random_card']['random_with_con_btn'] }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

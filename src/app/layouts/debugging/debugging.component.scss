@@ -1,0 +1,337 @@
+.warpper {
+    width: 87vw;
+    height: 100%;
+    .col-one {
+      display: flex;
+      flex-direction: row;
+      margin-top: 1rem;
+      width: 100%;
+      height: 80px;
+      .row-one {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        .row-one-col-one {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 40%;
+          .text {
+            padding-left: 50px;
+            font-size: 24px;
+          }
+        }
+        .row-one-col-two {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 60%;
+          .text {
+            padding-left: 50px;
+            font-size: 32px;
+            color: #3f51b5;
+          }
+        }
+      }
+    }
+    .col-two {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 400px;
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        .inner-container {
+          display: flex;
+          flex-direction: column;
+          width: 95%;
+          height: 90%;
+          .header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 10%;
+            border-left: 4px solid #1457ba;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+            .text {
+                padding-left: 10px;
+                font-size: 18px;
+                color: #3f51b5;
+            }
+          }
+          .body {
+            width: 100%;
+            height: 88%;
+            margin-top: auto;
+            .col {
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              height: 15%;
+              .sub-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+                .random_text {
+                  padding-left: 15px;
+                  font-size: 14px;
+                }
+                .random_input {
+                  height: 20px;
+                  border-radius: 10px;
+                  text-align: center;
+                }
+                .flex-one {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 30%;
+                  height: 100%;
+                }
+                .flex-two {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 70%;
+                  height: 100%;
+                }
+                button {
+                  margin-right: auto;
+                  width: 35%;
+                  border-radius: 20px;
+                  background: #3366cc;
+                  color: #fff;
+                }
+                button:disabled {
+                  background-color: rgba(0,0,0,.115) !important;            
+                  cursor: default;
+                }
+                mat-checkbox {
+                  margin: auto;
+                }
+              }
+            }
+            .random-container {
+              display: flex;
+              flex-direction: column;
+              width: 40%;
+              height: 80%;
+              .body-random-con {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                .head-condition {
+                  display:flex;
+                  flex-direction: row;
+                  width: 100%;
+                  height: 15%;
+                  align-items: center;
+                  padding-left: 10px;
+                  border-left: 4px solid #1457ba;
+                  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                  box-sizing: border-box;         /* Opera/IE 8+ */
+                  .head-text {
+                    font-size: 18px;
+                    color: #3f51b5;
+                  }
+                }
+                .row-condition {
+                  display:flex;
+                  flex-direction: row;
+                  width: 100%;
+                  height: 18%;
+                  align-items: center;
+                  .condition_unit {
+                    display: flex;
+                    flex-direction: column;
+                    width: 5%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    .text {
+                      font-size: 12px;
+                      font-weight: 500;
+                    }
+                  }
+
+                  .label-text {
+                    display: flex;
+                    flex-direction: column;
+                    width: 25%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    .random_text {
+                      font-size: 12px;
+                    }
+                  }
+                  .input-box {
+                    display: flex;
+                    flex-direction: column;
+                    width: 40%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    .random_input {
+                      height: 20px;
+                      border-radius: 10px;
+                      text-align: center;
+                    }
+                  }
+                  
+                }
+                .connect_prop {
+                  display: flex;
+                  flex-direction: column;
+                  width: 10%;
+                  height: 100%;
+                  padding-left: 10px;
+                  align-items: center;
+                    justify-content: center;
+                }
+                .disconnect_prop {
+                  width: 10%;
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+                  align-items: center;
+                    justify-content: center;
+                    .text {
+                      font-size: 10px;
+                      text-align: center;
+                      font-weight: 600;
+                    }
+                }
+                .slider-box {
+                  display: flex;
+                  flex-direction: column;
+                    width: 40%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    .mat-slider {
+                      min-width: 95%;
+                    }
+                }
+                .row-button {
+                  display:flex;
+                  flex-direction: row;
+                  width: 100%;
+                  height: 18%;
+                  align-items: center;
+                  justify-content: center;
+                  button {
+                    margin-right: auto;
+                    width: 30px;
+                    border-radius: 20px;
+                    background: #3366cc;
+                    color: #fff;
+                    margin-left: 23%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+}
+
+
+/*
+ * Switcher Styles
+ */
+
+.switcher {
+  display: inline-block;
+  width: 80%;
+  height: 70%;
+  padding: 4px;
+  border-radius: 2px;
+  border-radius: 30px;
+  border: solid 1px #ddd;
+  position: relative;
+}
+
+.switcher__input {
+  display: none;
+}
+
+.switcher__label {
+  text-align: center;
+  float: left;
+  width: 50%;
+  font-size: 12px;
+  line-height: 30px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  position: inherit;
+  z-index: 10;
+  transition: color 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+.switcher__toggle {
+  position: absolute;
+  float: left;
+  height: 80%;
+  width: 49%;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #3366cc;
+  border-radius: 30px;
+  left: 5px;
+  top: 4px;
+  transition: left 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+.checked_mode {
+  color: #fff;
+}
+
+.simulate_checked {
+  left: 120px;
+}
+
+.condition_checked {
+  left: 49%;
+}
+
+.connect_condition {
+  line-height: 27px;
+  font-size: 10px;
+}
+
+.switcher_condi {
+  display: inline-block;
+  width: 80%;
+  height: 60%;
+  padding: 4px;
+  border-radius: 2px;
+  border-radius: 30px;
+  border: solid 1px #ddd;
+  position: relative;
+}
